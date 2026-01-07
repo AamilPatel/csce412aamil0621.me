@@ -1,0 +1,470 @@
+/* General body styling */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fefefe;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+/* Style the image on the screen */
+  .photo {
+    grid-column: 1 / 2;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+  }
+  
+  .photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffd1dc;
+    box-shadow: 0 0 10px 3px #ffd1dc;
+  }
+  
+  /* Styling for the personal information section */
+  .my-info {
+    grid-column: 1 / 2;
+    text-align: left;
+  }
+  
+  .my-info h1 {
+    font-size: 30px;
+    color: #ff6f61;
+  }
+  
+  .my-info h2, .my-info h3 {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .my-info h3 {
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 10px;
+  }
+  
+  /* Navigation Menu styling */
+  .navigation-menu {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .navigation-menu a {
+    font-size: 18px;
+    color: #ff6f61;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #faf4ff;
+    border: 2px solid #ff6f61;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px #ffe4e1;
+  }
+  
+  .navigation-menu a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    box-shadow: 0 0 10px 4px #ffcccb;
+  }
+  
+  /* Interests and About Me Sections */
+  .interests, .about {
+    grid-column: 1 / span 2;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    border: 2px solid #ffe4e1;
+    font-size: 16px;
+  }
+  
+  .interests {
+    background-color: #fff5f7;
+  }
+  
+  .about {
+    background-color: #fffaf0;
+  }
+  
+  /* Heading styles for sections */
+  .interests h2, .about h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 5px;
+    color: #ff6f61;
+  }
+  
+  /* Link styling */
+  .interests p a, .about p a {
+    color: #ff6f61;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .interests p a:hover, .about p a:hover {
+    color: #ffcccb;
+  }
+
+  .interests:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 136, 192, 0.5);
+  }
+
+  .about:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 213, 150, 0.5);
+  }
+  
+  /* Button styles for style switching */
+  button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 3px #ffcccb;
+  }
+  
+  button:hover {
+    background-color: rgb(255, 159, 249);
+    box-shadow: 0 0 10px 5px #ffd1dc;
+  }
+  
+
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Portfolio title styling */
+.portfolio-title h1 {
+    font-size: 48px;
+    color: #ff6f61; /* Soft coral */
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    animation: bounce 1.5s infinite ease-in-out;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Portfolio container styling */
+.portfolio-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Portfolio items */
+.portfolio-item {
+    background-color: #fffaf0;
+    border: 2px solid #ffe4e1;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px 5px #ffe4e1;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pop-up 0.8s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 10px #ffcccb;
+}
+
+/* Portfolio item title */
+.portfolio-item h2 {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+/* Portfolio item text */
+.portfolio-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Portfolio links */
+.portfolio-item a {
+    font-size: 16px;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6f61;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    color: #ffcccb;
+    border-color: #ffcccb;
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Title Styling */
+.title h1 {
+    font-size: 48px;
+    color: #ff6f61;
+    animation: bounce 1.5s infinite ease-in-out;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Resume Button Styling */
+.resume a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff6f61;
+    border-radius: 125px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px 4px #ffe4e1;
+    display: inline-block;
+    margin-bottom: 30px;
+
+}
+
+.resume a:hover {
+    background-color: #ff80ce;
+    box-shadow: 0 0 20px 6px #ffcccb;
+}
+
+/* Skills and Interests Section Styling */
+.skills, .Interests {
+    background-color: #fffaf0;
+    padding: 20px;
+    border: 2px solid #ffe4e1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 4px #ffe4e1;
+    margin-bottom: 40px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.skills:hover, .Interests:hover {
+    box-shadow: 0 0 20px 8px #ffcccb;
+    transform: translateY(-5px);
+}
+
+/* Links Styling */
+.skills a, .Interests a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skills a:hover, .Interests a:hover {
+    color: #ffcccb;
+    border-color: #ffcccb;
+}
+
+/* Navigation Links */
+.navigation-2 a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6f61;
+    text-decoration: none;
+    margin: 0 15px;
+    border: 2px solid #ff6f61;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navigation-2 a:hover {
+    background-color: #ffcccb;
+    color: #fff;
+}
+
+/* Portfolio title styling */
+.portfolio-title h1 {
+    font-size: 48px;
+    color: #ff6f61; /* Soft coral */
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    animation: bounce 1.5s infinite ease-in-out;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+/* Portfolio container styling */
+.portfolio-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Portfolio items */
+.portfolio-item {
+    background-color: #fffaf0;
+    border: 2px solid #ffe4e1;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px 5px #ffe4e1;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pop-up 0.8s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 10px #ffcccb;
+}
+
+/* Portfolio item title */
+.portfolio-item h2 {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+/* Portfolio item text */
+.portfolio-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Portfolio links */
+.portfolio-item a {
+    font-size: 16px;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6f61;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    color: #ffcccb;
+    border-color: #ffcccb;
+}
+
+
+
+/* Title styling */
+.title h1 {
+    text-align: center;
+    font-size: 48px;
+    color: lightcoral;
+    margin-top: 20px;
+    text-shadow: 2px 2px 0px lightpink;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+/* Service container styling */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden; /* Remove scrollbars */
+}
+
+/* Service item styling */
+.service-item {
+    background-color: rgb(255, 217, 246);
+    border: 3px solid lightcoral;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+/* Link button styling */
+.service-item a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 166, 166);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+
+/* Navigation Menu */
+.navigation-2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+  /* Font Import */
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+  
+  
